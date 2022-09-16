@@ -1,0 +1,16 @@
+.gridWrapper {
+  height: 100%;
+}
+.sideBarWrapper {
+  background-color:darkslategray;
+  min-height: '100%';
+}
+.centerCard{
+  background-color:aqua;
+  height: 80vh;
+  width: 130vh;
+  margin-left: 110px;
+  margin-top: 50px;
+  border: 3px solid green;
+  padding: 10px;
+}
