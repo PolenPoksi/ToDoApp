@@ -1,38 +1,33 @@
-import './App.css';
 import {
-  BrowserRouter as Router,
+  BrowserRouter,
+  Routes, // instead of "Switch"
   Route,
-  Routes
+  Navigate
 } from "react-router-dom";
-import { Grid } from '@material-ui/core';
-
-import Navigation from './componens/navigation/navigation';
-import Newtask from './componens/new_task_screen';
-import Done from './componens/done_screen';
-import Todo from './componens/to_do_screen';
-
+import MenuDrawer from "./components/Menu";
+import CssBaseline from "@mui/material/CssBaseline";
+import Newtask from "./pages/new_task_screen";
+import Done from "./pages/done_screen";
+import ToDoPage from "./pages/to_do_screen";
+import { useDispatch } from "react-redux";
+import { create } from "./store/toDoActions";
 
 function App() {
+
+
   return (
-      <Router>
-      <Grid className='gridWrapper' container>
-        <Grid item xs={2} className="sideBarWrapper">
-          <Navigation />
-        </Grid>
-        <Grid item xs={10}>
+    <>
+      <CssBaseline />
+      <BrowserRouter>
         <Routes>
-          <Route path="/newtask" element={< Newtask/>} />
-          <Route path="/todo" element={< Todo/>} />
-          <Route path="/done" element={< Done/>} />
+          <Route path="/newtask" element={< Newtask />} />
+          <Route path="/todo" element={< ToDoPage />} />
+          <Route path="/done" element={< Done />} />
+          <Route path="/" element={< Newtask />} />
         </Routes>
-        </Grid>
-      </Grid>
-    </Router> 
+      </BrowserRouter>
+    </>
   );
 }
-
-
-
-
 
 export default App;
