@@ -1,6 +1,5 @@
 import { useSelector, useDispatch, shallowEqual } from "react-redux";
 import Todo from "../components/Todo";
-import { complete, getTodos } from "../store/toDoActions";
 import Grid from '@mui/material/Grid';
 import { Typography } from "@mui/material";
 import CenterBox from "../components/CenterBox";

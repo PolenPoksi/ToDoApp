@@ -1,7 +1,5 @@
 import * as React from 'react';
-
-import { Avatar, Card, CardHeader, IconButton, Typography } from '@mui/material';
-
+import { Avatar, Card, CardHeader, Typography } from '@mui/material';
 
 export default function ProfileCard() {
   return (

@@ -5,7 +5,6 @@ import { Grid, TextField, Button, Typography, MenuItem } from '@mui/material';
 import { create } from "../store/toDoActions.js";
 import * as yup from "yup";
 import { useFormik } from "formik";
-import { useState } from "react";
 
 
 const validationSchema = yup.object({
@@ -28,9 +27,6 @@ function Newtask() {
     ];
 
 
-
-
-
     const formik = useFormik({
         initialValues: {
             title: "",
@@ -46,8 +42,6 @@ function Newtask() {
     return (
         <MenuDrawer>
             <CenterBox>
-
-
                 <Grid container padding={5} justifyContent='center'>
                     <Grid item={true} xs={11}>
                         <Typography align="center" color="white" fontSize={55} >
@@ -155,16 +149,8 @@ function Newtask() {
                                 Insert
                             </Button>
                         </Grid>
-
-
-
                     </Grid>
-
-
                 </Grid>
-
-
-
             </CenterBox>
         </MenuDrawer>
     );

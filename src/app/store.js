@@ -1,7 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit'
 import toDoReducer from './store/toDoActions'
 import {
-    persistStore,
     persistReducer,
     FLUSH,
     REHYDRATE,

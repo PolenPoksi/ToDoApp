@@ -1,16 +1,10 @@
 import {
   Button,
-  Card,
-  CardContent,
-  CardHeader,
   Chip,
-  Collapse,
   IconButton,
-  Typography,
 } from "@material-ui/core";
 import { Add, Remove } from "@mui/icons-material";
-import { Stack } from "@mui/system";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { complete } from "../store/toDoActions";
 
@@ -92,58 +86,10 @@ export default function Todo({ todo }) {
             </Button>
           ) : (
             <></>
-           )}
+          )}
           </div>
         ) : null}
       </div>
     </>
-
-    // <Card sx={{ height:'20px',width:'80vw'}} >
-    //   <CardHeader
-    //     action={
-    //       <Stack direction="row" spacing={1} alignItems="center">
-    //         {!todo.completed ? (
-    //           <Chip label={todo.priority} style={selectButonColorBasedOnPriority(todo.priority)}  />
-    //         ) : (
-    //           <></>
-    //         )}
-
-    //         <IconButton aria-label="settings" onClick={handleExpand}>
-    //           {expanded ? <Remove /> : <Add />}
-    //         </IconButton>
-    //       </Stack>
-    //     }
-    //     title=  {<Typography align="left" variant="h4" sx={{fontWeight: 'bold'}} >{todo.title}</Typography>}
-
-    //   />
-    //   {/* <Collapse in={expanded} timeout="auto" unmountOnExit>
-    //     <CardContent>
-    //       <Typography paragraph>{todo.reply}</Typography>
-    //       {!todo.completed ? (
-    //         <Button
-    //           variant="contained"
-    //           autoCapitalize="false"
-    //           onClick={handleComplete}
-    //           style={{
-    //             borderRadius:"35px",
-    //             marginRight: 0,
-    //             marginLeft: "auto",
-    //             display: "block",
-    //             textTransform: "none",
-    //             color:'white',
-    //             backgroundColor:"#4700ab",
-    //           }}
-    //         >
-    //           Complete
-    //         </Button>
-    //       ) : (
-    //         <></>
-    //       )}
-    //     </CardContent>
-    //   </Collapse> */}
-    //   <CardContent>
-
-    //   </CardContent>
-    // </Card>
   );
 }
